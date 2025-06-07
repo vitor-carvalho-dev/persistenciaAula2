@@ -1,0 +1,100 @@
+-- =================================================================================
+-- SCRIPT DE CARGA DE DADOS (SEED) PARA O BANCO 'bdEmpresa' - VERSÃO CORRIGIDA
+-- Autor: Seu Arquiteto-Tutor (versão revisada)
+-- Descrição: Este script limpa as tabelas e as popula com dados de exemplo.
+--            Agora usa a ordem de exclusão correta, tornando-o mais robusto.
+-- =================================================================================
+
+-- Muda o contexto da execução para o banco de dados.
+USE bdEmpresa;
+GO
+
+-- =================================================================================
+-- ETAPA 1: LIMPEZA DOS DADOS EXISTENTES (MÉTODO SEGURO)
+-- A ordem de exclusão é o inverso da ordem de criação para respeitar as chaves estrangeiras.
+-- Não é necessário desabilitar as constraints com este método.
+-- =================================================================================
+PRINT 'Iniciando limpeza das tabelas (método seguro)...';
+GO
+
+-- 1. Exclui de Funcionarios (depende de Cargos, Departamentos, Cidades)
+DELETE FROM Funcionarios;
+
+-- 2. Exclui de Cargos (depende de Departamentos)
+DELETE FROM Cargos;
+
+-- 3. Exclui de Departamentos e Cidades (tabelas "pai", sem dependências)
+DELETE FROM Departamentos;
+DELETE FROM Cidades;
+GO
+
+
+-- =================================================================================
+-- ETAPA 2: REINICIALIZAÇÃO DOS CONTADORES DE IDENTITY
+-- Isso garante que os IDs comecem em 1 novamente, tornando as FKs previsíveis.
+-- =================================================================================
+DBCC CHECKIDENT ('[Funcionarios]', RESEED, 0);
+DBCC CHECKIDENT ('[Cargos]', RESEED, 0);
+DBCC CHECKIDENT ('[Departamentos]', RESEED, 0);
+DBCC CHECKIDENT ('[Cidades]', RESEED, 0);
+GO
+PRINT 'Limpeza e reinicialização dos contadores concluídas.';
+GO
+
+
+-- =================================================================================
+-- ETAPA 3: INSERÇÃO DE DADOS
+-- (Esta parte permanece a mesma, pois a lógica de inserção já estava correta)
+-- =================================================================================
+
+-- ===== DADOS PARA A TABELA DE DEPARTAMENTOS =====
+PRINT 'Inserindo dados em [Departamentos]...';
+INSERT INTO Departamentos (Nome, Sigla, Email, Telefone) VALUES
+('Tecnologia da Informação', 'TI', 'ti@empresa.com', '(11) 98765-4321'),
+('Recursos Humanos', 'RH', 'rh@empresa.com', '(11) 98765-4322'),
+('Financeiro', 'FIN', 'financeiro@empresa.com', '(11) 98765-4323'),
+('Vendas', 'VENDAS', 'vendas@empresa.com', NULL),
+('Marketing', 'MKT', NULL, NULL);
+GO
+
+-- ===== DADOS PARA A TABELA DE CIDADES =====
+PRINT 'Inserindo dados em [Cidades]...';
+INSERT INTO Cidades (Nome, Estado, UF, CEP, Populacao) VALUES
+('São Paulo', 'São Paulo', 'SP', '01000-000', 12396372),
+('Rio de Janeiro', 'Rio de Janeiro', 'RJ', '20000-000', 6775561),
+('Belo Horizonte', 'Minas Gerais', 'MG', '30100-000', 2530701),
+('Curitiba', 'Paraná', 'PR', '80000-000', 1963726);
+GO
+
+-- ===== DADOS PARA A TABELA DE CARGOS =====
+-- IDs de Departamento: 1-TI, 2-RH, 3-Financeiro, 4-Vendas, 5-Marketing
+PRINT 'Inserindo dados em [Cargos]...';
+INSERT INTO Cargos (DepartamentoId, Nome, Descricao, SalarioBase) VALUES
+(1, 'Desenvolvedor(a) Sênior', 'Responsável pelo desenvolvimento e manutenção de sistemas complexos.', 9000.00),
+(1, 'Arquiteto(a) de Software', 'Define a arquitetura e as tecnologias para novos projetos de software.', 14000.00),
+(2, 'Analista de RH', 'Conduz processos de recrutamento, seleção e treinamento.', 4500.00),
+(2, 'Gerente de RH', 'Gerencia todas as atividades do departamento de RH.', 11000.00),
+(3, 'Analista Financeiro', 'Realiza análises de faturamento, custos e fluxo de caixa.', 5500.00),
+(4, 'Vendedor(a) Especialista', 'Responsável por vendas consultivas e grandes contas.', 4000.00),
+(5, 'Analista de Marketing Digital', 'Gerencia campanhas online, SEO e mídias sociais.', 5000.00);
+GO
+
+-- ===== DADOS PARA A TABELA DE FUNCIONÁRIOS =====
+-- IDs de Departamento: 1-TI, 2-RH, 3-FIN, 4-VENDAS, 5-MKT
+-- IDs de Cargo: 1-Dev, 2-Arquiteto, 3-AnalistaRH, 4-GerenteRH, 5-AnalistaFin, 6-Vendedor, 7-AnalistaMkt
+-- IDs de Cidade: 1-SP, 2-RJ, 3-BH, 4-Curitiba
+PRINT 'Inserindo dados em [Funcionarios]...';
+INSERT INTO Funcionarios (DepartamentoId, CargoId, CidadeId, Nome, NomeMae, NomePai, DataNascimento, CPF, RG, Email, Salario, DataAdmissao, Ativo) VALUES
+(1, 2, 1, 'Ana Clara Oliveira', 'Maria Oliveira', 'João Oliveira', '1985-11-20', '11122233344', '12.345.678-9', 'ana.oliveira@empresa.com', 15500.00, '2020-03-15', 1),
+(1, 1, 2, 'Bruno Mendes Costa', 'Helena Costa', 'Ricardo Costa', '1992-07-30', '22233344455', '23.456.789-0', 'bruno.costa@empresa.com', 9850.50, '2022-01-10', 1),
+(2, 4, 1, 'Carla Dias Lima', 'Beatriz Lima', NULL, '1988-02-14', '33344455566', '34.567.890-1', 'carla.lima@empresa.com', 12000.00, '2018-05-20', 1),
+(2, 3, 3, 'Daniel Alves', 'Sofia Alves', 'Pedro Alves', '1995-09-05', '44455566677', '45.678.901-2', 'daniel.alves@empresa.com', 4600.75, '2023-02-01', 1),
+(3, 5, 1, 'Eduarda Ferreira', 'Laura Ferreira', 'Marcos Ferreira', '1998-01-22', '55566677788', '56.789.012-3', 'eduarda.ferreira@empresa.com', 5500.00, '2023-08-11', 1),
+(4, 6, 4, 'Fábio Souza', 'Isabela Souza', 'Fernando Souza', '1993-06-18', '66677788899', '67.890.123-4', 'fabio.souza@empresa.com', 4100.00, '2021-11-30', 0), -- Funcionário Inativo
+(1, 1, NULL, 'Gabriela Santos', 'Júlia Santos', 'Tiago Santos', '1996-04-12', '77788899900', '78.901.234-5', 'gabriela.santos@empresa.com', 9100.00, '2024-01-05', 1); -- Funcionária sem cidade cadastrada
+GO
+
+PRINT '=======================================================';
+PRINT 'Carga de dados no banco "bdEmpresa" concluída com sucesso!';
+PRINT '=======================================================';
+GO

@@ -1,0 +1,79 @@
+﻿@page "/departamentos"
+@using MBExemploEmpresa.Entidades
+@using MBExemploEmpresa.Servico
+@using MudBlazor
+@inject DepartamentoService departamentoServico
+@inject IDialogService DialogService
+@inject ISnackbar Snackbar
+
+<PageTitle>Departamentos</PageTitle>
+<MudCard>
+	<MudCardContent>
+		<MudText Typo="Typo.h6" Class="mb-4">Departamentos Cadastrados</MudText>
+	</MudCardContent>
+	<MudPaper Class="d-flex justify-end flex-grow-1 mb-s" Elevation="0">
+		<MudButton Color="Color.Primary"
+				   Variant="Variant.Filled"
+				   StartIcon="@Icons.Material.Filled.Add">
+			Adicionar Novo Departamento
+		</MudButton>
+	</MudPaper>
+	@if (_loading==false)
+	{
+		<MudProgressCircular Color="Color.Primary" Indeterminate="true" Class="my-7" />
+	}
+	else
+	{
+		<MudDataGrid Items="@_departamentos" SortMode="SortMode.Multiple" Hover="true">
+			<Columns>
+				<PropertyColumn Property="x => x.Id" title="ID"></PropertyColumn>
+				<PropertyColumn Property="x => x.Nome" title="Nome"></PropertyColumn>
+				<PropertyColumn Property="x => x.Sigla" title="Sigla"></PropertyColumn>
+				<PropertyColumn Property="x => x.Email" title="Email"></PropertyColumn>
+				<PropertyColumn Property="x => x.Telefone" title="Telefone"></PropertyColumn>
+				<TemplateColumn StickyRight="true" Title="Ações" Sortable="false">
+					<CellTemplate>
+						<MudIconButton Icon="@Icons.Material.Filled.Edit" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small" />
+						<MudIconButton Icon="@Icons.Material.Filled.Delete" Variant="Variant.Filled" Color="Color.Error" Size="Size.Small" />
+					</CellTemplate>
+				</TemplateColumn>
+			</Columns>
+			<PagerContent>
+				<MudDataGridPager T="Departamento"></MudDataGridPager>
+			</PagerContent>
+		</MudDataGrid>
+	}
+</MudCard>
+
+@code {
+	private List<Departamento> _departamentos = new();
+	private bool _dialogOpen;
+	private bool _loading;
+
+	private readonly DialogOptions _dialogOptions = new()
+		{
+			CloseButton = true,
+			MaxWidth = MaxWidth.Medium,
+			FullWidth = true,
+			CloseOnEscapeKey = true
+		};
+
+	protected override Task OnInitializedAsync()
+	{
+		return CarregarAsync();
+	}
+
+	private async Task CarregarAsync()
+	{
+		try
+		{
+			_loading = true;
+			StateHasChanged();
+			_departamentos = await departamentoServico.ObterTodosAsync();
+		}
+		catch (Exception err)
+		{
+			Snackbar.Add($"Erro ao carregar departamentos : {err.Message}", Severity.Error);
+		}
+	}
+}

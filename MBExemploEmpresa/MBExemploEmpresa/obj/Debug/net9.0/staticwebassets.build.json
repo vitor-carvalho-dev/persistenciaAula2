@@ -1,0 +1,810 @@
+{
+  "Version": 1,
+  "Hash": "vh6U2Yc05dEtv8lk7QB2JWT3niNu07yVFnRCMVHiuGs=",
+  "Source": "MBExemploEmpresa",
+  "BasePath": "_content/MBExemploEmpresa",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MBExemploEmpresa\\wwwroot",
+      "Source": "MBExemploEmpresa",
+      "ContentRoot": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\wwwroot\\",
+      "BasePath": "_content/MBExemploEmpresa",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\vitor.nononha\\.nuget\\packages\\mudblazor\\8.7.0\\staticwebassets\\MudBlazor.min.css",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\vitor.nononha\\.nuget\\packages\\mudblazor\\8.7.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f7451o6lak",
+      "Integrity": "dbrztyw7cpD/dvGeaqylyRiNofbn9I08NpD/6iCdbjA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\vitor.nononha\\.nuget\\packages\\mudblazor\\8.7.0\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\vitor.nononha\\.nuget\\packages\\mudblazor\\8.7.0\\staticwebassets\\MudBlazor.min.js",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\vitor.nononha\\.nuget\\packages\\mudblazor\\8.7.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "shgs22i5w1",
+      "Integrity": "gCxH2RI5xXVkxLFgcHgDuyoXu7IWZwdvZ5USM+27dIk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\vitor.nononha\\.nuget\\packages\\mudblazor\\8.7.0\\staticwebassets\\MudBlazor.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\Debug\\net9.0\\compressed\\0wz98yz2xy-shgs22i5w1.gz",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\vitor.nononha\\.nuget\\packages\\mudblazor\\8.7.0\\staticwebassets\\MudBlazor.min.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "z5bujn1zvi",
+      "Integrity": "+exlo59CKmCfU04eDbiDbKqeJaYCIVvhg64jqp35nG8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\vitor.nononha\\.nuget\\packages\\mudblazor\\8.7.0\\staticwebassets\\MudBlazor.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\Debug\\net9.0\\compressed\\ammg7pfwme-2jeq8efc6q.gz",
+      "SourceId": "MBExemploEmpresa",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/MBExemploEmpresa",
+      "RelativePath": "favicon#[.{fingerprint=2jeq8efc6q}]?.ico.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\wwwroot\\favicon.ico",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "3ren6c1acn",
+      "Integrity": "b7CPHqpoIGsGVgOrEO+r2XPyaLrLUBwkA6R2jOMbS7M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\Debug\\net9.0\\compressed\\tzxjg6is5z-f7451o6lak.gz",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\vitor.nononha\\.nuget\\packages\\mudblazor\\8.7.0\\staticwebassets\\MudBlazor.min.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "zz2z2gwtkc",
+      "Integrity": "77tpU9AWy7RQ4BEik1v/gTsvtRn02mER5xv3B2/FG/k=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\vitor.nononha\\.nuget\\packages\\mudblazor\\8.7.0\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\wwwroot\\favicon.ico",
+      "SourceId": "MBExemploEmpresa",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\wwwroot\\",
+      "BasePath": "_content/MBExemploEmpresa",
+      "RelativePath": "favicon#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2jeq8efc6q",
+      "Integrity": "8kNQh+LErZHx3sMz237BHWFasAGQ88EWakJrWWYOxTA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "_content/MudBlazor/MudBlazor.min.css",
+      "AssetFile": "C:\\Users\\vitor.nononha\\.nuget\\packages\\mudblazor\\8.7.0\\staticwebassets\\MudBlazor.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "604382"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dbrztyw7cpD/dvGeaqylyRiNofbn9I08NpD/6iCdbjA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 08:29:34 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dbrztyw7cpD/dvGeaqylyRiNofbn9I08NpD/6iCdbjA="
+        }
+      ]
+    },
+    {
+      "Route": "_content/MudBlazor/MudBlazor.min.css",
+      "AssetFile": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\Debug\\net9.0\\compressed\\tzxjg6is5z-f7451o6lak.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000015306435"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65331"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"77tpU9AWy7RQ4BEik1v/gTsvtRn02mER5xv3B2/FG/k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 08:29:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"dbrztyw7cpD/dvGeaqylyRiNofbn9I08NpD/6iCdbjA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dbrztyw7cpD/dvGeaqylyRiNofbn9I08NpD/6iCdbjA="
+        }
+      ]
+    },
+    {
+      "Route": "_content/MudBlazor/MudBlazor.min.css.gz",
+      "AssetFile": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\Debug\\net9.0\\compressed\\tzxjg6is5z-f7451o6lak.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65331"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"77tpU9AWy7RQ4BEik1v/gTsvtRn02mER5xv3B2/FG/k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 08:29:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-77tpU9AWy7RQ4BEik1v/gTsvtRn02mER5xv3B2/FG/k="
+        }
+      ]
+    },
+    {
+      "Route": "_content/MudBlazor/MudBlazor.min.f7451o6lak.css",
+      "AssetFile": "C:\\Users\\vitor.nononha\\.nuget\\packages\\mudblazor\\8.7.0\\staticwebassets\\MudBlazor.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "604382"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dbrztyw7cpD/dvGeaqylyRiNofbn9I08NpD/6iCdbjA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 08:29:34 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f7451o6lak"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-dbrztyw7cpD/dvGeaqylyRiNofbn9I08NpD/6iCdbjA="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/MudBlazor/MudBlazor.min.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/MudBlazor/MudBlazor.min.js",
+      "AssetFile": "C:\\Users\\vitor.nononha\\.nuget\\packages\\mudblazor\\8.7.0\\staticwebassets\\MudBlazor.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73018"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gCxH2RI5xXVkxLFgcHgDuyoXu7IWZwdvZ5USM+27dIk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 08:29:34 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gCxH2RI5xXVkxLFgcHgDuyoXu7IWZwdvZ5USM+27dIk="
+        }
+      ]
+    },
+    {
+      "Route": "_content/MudBlazor/MudBlazor.min.js",
+      "AssetFile": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\Debug\\net9.0\\compressed\\0wz98yz2xy-shgs22i5w1.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000065184799"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15340"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+exlo59CKmCfU04eDbiDbKqeJaYCIVvhg64jqp35nG8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 08:29:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"gCxH2RI5xXVkxLFgcHgDuyoXu7IWZwdvZ5USM+27dIk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gCxH2RI5xXVkxLFgcHgDuyoXu7IWZwdvZ5USM+27dIk="
+        }
+      ]
+    },
+    {
+      "Route": "_content/MudBlazor/MudBlazor.min.js.gz",
+      "AssetFile": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\Debug\\net9.0\\compressed\\0wz98yz2xy-shgs22i5w1.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15340"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+exlo59CKmCfU04eDbiDbKqeJaYCIVvhg64jqp35nG8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 08:29:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+exlo59CKmCfU04eDbiDbKqeJaYCIVvhg64jqp35nG8="
+        }
+      ]
+    },
+    {
+      "Route": "_content/MudBlazor/MudBlazor.min.shgs22i5w1.js",
+      "AssetFile": "C:\\Users\\vitor.nononha\\.nuget\\packages\\mudblazor\\8.7.0\\staticwebassets\\MudBlazor.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73018"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gCxH2RI5xXVkxLFgcHgDuyoXu7IWZwdvZ5USM+27dIk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 08:29:34 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "shgs22i5w1"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gCxH2RI5xXVkxLFgcHgDuyoXu7IWZwdvZ5USM+27dIk="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/MudBlazor/MudBlazor.min.js"
+        }
+      ]
+    },
+    {
+      "Route": "favicon.2jeq8efc6q.ico",
+      "AssetFile": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\Debug\\net9.0\\compressed\\ammg7pfwme-2jeq8efc6q.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000336021505"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2975"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b7CPHqpoIGsGVgOrEO+r2XPyaLrLUBwkA6R2jOMbS7M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 12:15:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"8kNQh+LErZHx3sMz237BHWFasAGQ88EWakJrWWYOxTA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2jeq8efc6q"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8kNQh+LErZHx3sMz237BHWFasAGQ88EWakJrWWYOxTA="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.2jeq8efc6q.ico",
+      "AssetFile": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15086"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8kNQh+LErZHx3sMz237BHWFasAGQ88EWakJrWWYOxTA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 12:15:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2jeq8efc6q"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8kNQh+LErZHx3sMz237BHWFasAGQ88EWakJrWWYOxTA="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.2jeq8efc6q.ico.gz",
+      "AssetFile": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\Debug\\net9.0\\compressed\\ammg7pfwme-2jeq8efc6q.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2975"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b7CPHqpoIGsGVgOrEO+r2XPyaLrLUBwkA6R2jOMbS7M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 12:15:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2jeq8efc6q"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-b7CPHqpoIGsGVgOrEO+r2XPyaLrLUBwkA6R2jOMbS7M="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\Debug\\net9.0\\compressed\\ammg7pfwme-2jeq8efc6q.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000336021505"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2975"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b7CPHqpoIGsGVgOrEO+r2XPyaLrLUBwkA6R2jOMbS7M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 12:15:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"8kNQh+LErZHx3sMz237BHWFasAGQ88EWakJrWWYOxTA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8kNQh+LErZHx3sMz237BHWFasAGQ88EWakJrWWYOxTA="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15086"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8kNQh+LErZHx3sMz237BHWFasAGQ88EWakJrWWYOxTA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 12:15:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8kNQh+LErZHx3sMz237BHWFasAGQ88EWakJrWWYOxTA="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico.gz",
+      "AssetFile": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\Debug\\net9.0\\compressed\\ammg7pfwme-2jeq8efc6q.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2975"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b7CPHqpoIGsGVgOrEO+r2XPyaLrLUBwkA6R2jOMbS7M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 07 Jun 2025 12:15:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-b7CPHqpoIGsGVgOrEO+r2XPyaLrLUBwkA6R2jOMbS7M="
+        }
+      ]
+    }
+  ]
+}
