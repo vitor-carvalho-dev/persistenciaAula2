@@ -54,7 +54,7 @@ namespace MBExemploEmpresa.Servico
                 // CORRIGIDO: Usar o nome correto da tabela
                 var command = new SqlCommand("SELECT Id, Nome, Sigla, Email, Telefone " +
                     "FROM departamentos " +
-                    "WHERE Id=@id" +
+                    "WHERE Id = @id " +
                     "ORDER BY Nome", connection);
                 command.Parameters.AddWithValue("@id", id);
 
@@ -90,7 +90,7 @@ namespace MBExemploEmpresa.Servico
                 // CORRIGIDO: Usar o nome correto da tabela
                 var command = new SqlCommand("SELECT Id, Nome, Sigla, Email, Telefone " +
                     "FROM departamentos " +
-                    "WHERE Nome Like @nome" +
+                    "WHERE Nome Like @nome " +
                     "ORDER BY Nome", connection);
                 command.Parameters.AddWithValue("@nome", $"%{nome}");
 
@@ -118,17 +118,17 @@ namespace MBExemploEmpresa.Servico
         {            
 
             using (var connection = new SqlConnection(_connectionString))
-            {
+            {                
+
                 await connection.OpenAsync();
-                // CORRIGIDO: Usar o nome correto da tabela
-                var command = new SqlCommand("SELECT Id, Nome, Sigla, Email, Telefone " +
-                    "VALUES (@Nome, @Sigla, @Email, @Telefone) " , connection);
-                command.Parameters.AddWithValue("@nome",departamento.Nome);
+                var command = new SqlCommand("INSERT INTO Departamentos (Nome,Sigla, Email, Telefone)" +
+                    "VALUES (@Nome,@Sigla,@Email,@Telefone)", connection);
+                command.Parameters.AddWithValue("@Nome", departamento.Nome);
                 command.Parameters.AddWithValue("@Sigla", departamento.Sigla);
                 command.Parameters.AddWithValue("@Email", departamento.Email ?? (object)DBNull.Value);
                 command.Parameters.AddWithValue("@Telefone", departamento.Telefone ?? (object)DBNull.Value);
                 await command.ExecuteNonQueryAsync();
-                
+
             }
 
             
@@ -150,7 +150,7 @@ namespace MBExemploEmpresa.Servico
                                   "WHERE Id = @Id", connection);
 
                 command.Parameters.AddWithValue("@Id", departamento.Id);
-                command.Parameters.AddWithValue("@nome", departamento.Nome);
+                command.Parameters.AddWithValue("@Nome", departamento.Nome);
                 command.Parameters.AddWithValue("@Sigla", departamento.Sigla);
                 command.Parameters.AddWithValue("@Email", departamento.Email ?? (object)DBNull.Value);
                 command.Parameters.AddWithValue("@Telefone", departamento.Telefone ?? (object)DBNull.Value);
@@ -169,8 +169,7 @@ namespace MBExemploEmpresa.Servico
 
                 // Esta é a sintaxe do DELETE em SQL.
 
-                var command = new SqlCommand("DELETE FROM Departamentos SET " +                                  
-                                  "WHERE Id = @Id", connection);
+                var command = new SqlCommand("DELETE FROM Departamentos WHERE Id = @Id", connection);               
 
                 command.Parameters.AddWithValue("@Id", id);                
                 await command.ExecuteNonQueryAsync();

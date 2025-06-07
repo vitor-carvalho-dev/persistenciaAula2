@@ -13,12 +13,13 @@
 	</MudCardContent>
 	<MudPaper Class="d-flex justify-end flex-grow-1 mb-s" Elevation="0">
 		<MudButton Color="Color.Primary"
-				   Variant="Variant.Filled"
-				   StartIcon="@Icons.Material.Filled.Add">
+		Variant="Variant.Filled"
+		StartIcon="@Icons.Material.Filled.Add"
+		onclick="@(()=> ShowDialog(string.Empty))">
 			Adicionar Novo Departamento
 		</MudButton>
 	</MudPaper>
-	@if (_loading==false)
+	@if (_loading)
 	{
 		<MudProgressCircular Color="Color.Primary" Indeterminate="true" Class="my-7" />
 	}
@@ -33,8 +34,8 @@
 				<PropertyColumn Property="x => x.Telefone" title="Telefone"></PropertyColumn>
 				<TemplateColumn StickyRight="true" Title="Ações" Sortable="false">
 					<CellTemplate>
-						<MudIconButton Icon="@Icons.Material.Filled.Edit" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small" />
-						<MudIconButton Icon="@Icons.Material.Filled.Delete" Variant="Variant.Filled" Color="Color.Error" Size="Size.Small" />
+						<MudIconButton Icon="@Icons.Material.Filled.Edit" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small" onclick="@(()=> ShowDialog(context.Item.Id.ToString()))" />
+						<MudIconButton Icon="@Icons.Material.Filled.Delete" Variant="Variant.Filled" Color="Color.Error" Size="Size.Small" onclick="@(()=> ConfirmDelete(context.Item))" />
 					</CellTemplate>
 				</TemplateColumn>
 			</Columns>
@@ -74,6 +75,77 @@
 		catch (Exception err)
 		{
 			Snackbar.Add($"Erro ao carregar departamentos : {err.Message}", Severity.Error);
+		}finally 
+		{
+			_loading = false;
+			StateHasChanged();
+		}
+	}
+
+	private async Task ShowDialog(string id){
+
+		try{
+			_dialogOpen = true;
+			StateHasChanged();
+			var parameters = new DialogParameters();
+
+			if (!string.IsNullOrEmpty(id) && int.TryParse(id, out int Id)) {
+				var departamento = await departamentoServico.ObterPorIdAsync(Id);
+				if (departamento !=null) {
+					parameters.Add("Model", new Departamento
+						{
+							Id = departamento.Id,
+							Nome = departamento.Nome,
+							Sigla = departamento.Sigla,
+							Email = departamento.Email,
+							Telefone = departamento.Telefone
+						});				
+				} else {
+					Snackbar.Add("Departamento nao encontrado.", Severity.Warning);
+					return;
+				}
+			} else {
+				parameters.Add("Model", new Departamento());
+			}
+			var title = string.IsNullOrEmpty(id) ? "Novo departamento" : "Editar departamento";
+			var dialog = DialogService.Show<DialogDepartamento>(title, parameters, _dialogOptions);
+			var result = await dialog.Result;
+			if(!result.Canceled){
+				await CarregarAsync();
+			}
+		}
+		catch (Exception err)
+		{
+			Snackbar.Add($"Erro ao abrir o formulario : {err.Message}", Severity.Error);
+		}
+		finally
+		{
+			_loading = false;
+			StateHasChanged();
+		}
+	}
+
+	private async Task ConfirmDelete(Departamento d)
+	{
+		try
+		{
+			bool? ok = await DialogService.ShowMessageBox(
+				"Confirmação",
+				$"Excluir departamento \"{d.Nome}\"?",
+				yesText: "Sim",
+				cancelText: "Não");
+
+			if (ok == true)
+			{
+				await departamentoServico.DeletarDepartamentoAsync(d.Id);
+				Snackbar.Add("Departamento removido.", Severity.Success);
+				await CarregarAsync();
+			}
+		}
+		catch (Exception e)
+		{
+			Console.WriteLine($"Erro ao deletar: {e}"); // Debug
+			Snackbar.Add($"Erro ao excluir departamento: {e.Message}", Severity.Error);
 		}
 	}
 }
