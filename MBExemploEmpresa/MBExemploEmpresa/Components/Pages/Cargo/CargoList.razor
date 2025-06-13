@@ -1,0 +1,23 @@
+﻿@page "/cargos"
+@using MBExemploEmpresa.Entidades
+@using MBExemploEmpresa.Servico
+@using MudBlazor
+@inject CargoService cargoServico
+@inject IDialogService DialogService
+@inject ISnackbar Snackbar
+
+<PageTitle>Cargos</PageTitle>
+
+@code {
+	private List<Cargo> _departamentos = new();
+	private bool _dialogOpen;
+	private bool _loading;
+
+	private readonly DialogOptions _dialogOptions = new()
+		{
+			CloseButton = true,
+			MaxWidth = MaxWidth.Medium,
+			FullWidth = true,
+			CloseOnEscapeKey = true
+		};
+}

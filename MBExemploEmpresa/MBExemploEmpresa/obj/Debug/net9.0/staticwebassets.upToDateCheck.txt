@@ -1,2 +1,2 @@
-C:\Users\vitor.nononha\Desktop\Projeto_Aula2\persistenciaAula2\MBExemploEmpresa\MBExemploEmpresa\wwwroot\favicon.ico
+D:\PosGraduacao_FullStack\Persistencia_Dados\persistenciaAula2\MBExemploEmpresa\MBExemploEmpresa\wwwroot\favicon.ico
 wwwroot\favicon.ico

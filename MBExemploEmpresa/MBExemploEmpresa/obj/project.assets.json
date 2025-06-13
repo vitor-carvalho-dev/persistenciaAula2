@@ -2193,23 +2193,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vitor.nononha\\.nuget\\packages\\": {},
+    "C:\\Users\\vitor\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\MBExemploEmpresa.csproj",
+      "projectUniqueName": "D:\\PosGraduacao_FullStack\\Persistencia_Dados\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\MBExemploEmpresa.csproj",
       "projectName": "MBExemploEmpresa",
-      "projectPath": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\MBExemploEmpresa.csproj",
-      "packagesPath": "C:\\Users\\vitor.nononha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vitor.nononha\\Desktop\\Projeto_Aula2\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\",
+      "projectPath": "D:\\PosGraduacao_FullStack\\Persistencia_Dados\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\MBExemploEmpresa.csproj",
+      "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
+      "outputPath": "D:\\PosGraduacao_FullStack\\Persistencia_Dados\\persistenciaAula2\\MBExemploEmpresa\\MBExemploEmpresa\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\vitor.nononha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2218,7 +2218,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2235,7 +2234,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
+        "auditMode": "all"
       },
       "SdkAnalysisLevel": "9.0.100"
     },
@@ -2275,7 +2274,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

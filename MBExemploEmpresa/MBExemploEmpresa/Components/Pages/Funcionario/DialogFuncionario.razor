@@ -1,0 +1,24 @@
+﻿@page "/funcionarios"
+@using MBExemploEmpresa.Entidades
+@using MBExemploEmpresa.Servico
+@using MudBlazor
+@inject CargoService cargoServico
+@inject IDialogService DialogService
+@inject ISnackbar Snackbar
+
+<PageTitle>Funcionarios</PageTitle>
+
+@code {
+	private List<Funcionario> _departamentos = new();
+	private bool _dialogOpen;
+	private bool _loading;
+
+	private readonly DialogOptions _dialogOptions = new()
+		{
+			CloseButton = true,
+			MaxWidth = MaxWidth.Medium,
+			FullWidth = true,
+			CloseOnEscapeKey = true
+		};
+
+}
