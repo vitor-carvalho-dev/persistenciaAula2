@@ -26,7 +26,7 @@ namespace MBExemploEmpresa.Entidades
         public string NomePai { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Data de nascimento é obrigatória")]
-        public DateTime DataNascimento { get; set; }
+        public DateTime? DataNascimento { get; set; }
 
         [Required(ErrorMessage = "CPF é obrigatório")]
         [StringLength(11, MinimumLength = 11, ErrorMessage = "CPF deve ter exatamente 11 dígitos")]
@@ -47,7 +47,7 @@ namespace MBExemploEmpresa.Entidades
         public decimal Salario { get; set; }
 
         [Required(ErrorMessage = "Data de admissão é obrigatória")]
-        public DateTime DataAdmissao { get; set; } = DateTime.Today;
+        public DateTime? DataAdmissao { get; set; } = DateTime.Today;
 
         public bool Ativo { get; set; } = true;
 

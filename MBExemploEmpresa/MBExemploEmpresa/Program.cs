@@ -14,8 +14,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 // Injeção de dependencia - registrando os serviços
 
 builder.Services.AddScoped(provider=> new DepartamentoService(connectionString));
-// builder.Services.AddScoped(provider => new CargoService(connectionString));
-// builder.Services.AddScoped(provider => new FuncionarioService(connectionString));
+builder.Services.AddScoped(provider => new CargoService(connectionString));
+builder.Services.AddScoped(provider => new FuncionarioService(connectionString));
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

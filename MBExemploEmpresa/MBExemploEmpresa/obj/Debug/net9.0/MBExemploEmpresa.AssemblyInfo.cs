@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MBExemploEmpresa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40bd937d0fec64119d251f90a916cf90798ec34c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c06cc50278ec9f44d6e44aeeeef9aeb4286ea6e6")]
 [assembly: System.Reflection.AssemblyProductAttribute("MBExemploEmpresa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MBExemploEmpresa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

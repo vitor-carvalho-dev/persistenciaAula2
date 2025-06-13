@@ -133,6 +133,55 @@ namespace MBExemploEmpresa.Servico
             return funcionarios;
         }
 
+        public async Task<Funcionario?> ObterPorIdAsync(int id)
+        {
+            Funcionario? funcionario = null;
+
+            const string queryFuncionario = @"
+                    SELECT 
+                        f.Id, f.Nome, f.CPF, f.Email, f.Salario, f.Ativo, f.DataAdmissao, f.DataNascimento, f.RG, f.NomeMae, f.NomePai,
+                        f.DepartamentoId, d.Nome AS NomeDepartamento,
+                        f.CargoId, c.Nome AS NomeCargo
+                    FROM Funcionarios f
+                    INNER JOIN Departamentos d ON f.DepartamentoId = d.Id
+                    INNER JOIN Cargos c ON f.CargoId = c.Id
+                    WHERE f.Id = @id;";
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                await connection.OpenAsync();
+                var command = new SqlCommand(queryFuncionario, connection);
+                command.Parameters.AddWithValue("@id", id);
+
+                using (var reader = await command.ExecuteReaderAsync())
+                {
+                    if (await reader.ReadAsync())
+                    {
+                        // Aqui podemos reutilizar a lógica de mapeamento
+                        funcionario = new Funcionario
+                        {
+                            Id = reader.GetInt32("Id"),
+                            DepartamentoId = reader.GetInt32("DepartamentoId"),
+                            CargoId = reader.GetInt32("CargoId"),
+                            Nome = reader.GetString("Nome"),
+                            DataNascimento = reader.GetDateTime("DataNascimento"),
+                            CPF = reader.GetString("CPF"),
+                            Salario = reader.GetDecimal("Salario"),
+                            DataAdmissao = reader.GetDateTime("DataAdmissao"),
+                            Ativo = reader.GetBoolean("Ativo"),
+                            NomeMae = reader.IsDBNull("NomeMae") ? string.Empty : reader.GetString("NomeMae"),
+                            NomePai = reader.IsDBNull("NomePai") ? string.Empty : reader.GetString("NomePai"),
+                            RG = reader.IsDBNull("RG") ? string.Empty : reader.GetString("RG"),
+                            Email = reader.IsDBNull("Email") ? string.Empty : reader.GetString("Email"),
+                            NomeDepartamento = reader.GetString("NomeDepartamento"),
+                            NomeCargo = reader.GetString("NomeCargo")
+                        };
+                    }
+                }
+            }
+            return funcionario;
+        }
+
         public async Task AdicionarFuncionarioAsync(Funcionario funcionario)
         {
             const string queryFuncionario = @"
